@@ -1,67 +1,145 @@
-.header {
-    display: flex;
-    align-items: center;           /* alinea verticalmente */
-    justify-content: space-between;
-    padding: 15px 40px;
-    background-color: bisque;
-    border: 1px solid rgb(8, 7, 7);
-    background-image: url(imagen_main_wood.jpg);
-    background-size: 2000px;
+/*1. RESET Y FUENTES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.menu_icono {
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4; /* Un color más neutro para resaltar la portada*/
+}
+
+/* 2. HEADER Y NAVEGACIÓN */
+.header {
+    position: absolute; /* Flota sobre el Hero al inicio */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 1000;
+    transition: all 0.4s ease;
+    background: transparent;
+}
+/* 3. LOGO Y MENÚ */
+.logo_contenedor {
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 10px;
 }
 
-.logo {
-    font-size: 40px;
+.logo_imagen {
+    width: 60px;
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));
+}
+
+.logo_texto {
+    font-size: 28px;
     font-weight: bold;
-    color: rgb(243, 242, 240);
-    text-decoration: none;         /* quita subrayado */
-    
-}
-
-.logo:hover {
-    color: rgb(24, 24, 24);
+    color: white; 
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .menu {
     display: flex;
     gap: 25px;
+    align-items: center;
 }
 
 .menu a {
     text-decoration: none;
-    color: #f7f7f7;
-    font-size: 25px;
+    color: white;
+    font-size: 18px;
     font-weight: bold;
-    
-    
+    text-transform: uppercase;
 }
 
-.menu a:hover {
-    color: rgb(63, 36, 36);
+/* 4.SECCION HERO(PORTADA PRINCIPAL) */
+.hero {
+    background-image: url('Pollo-a-la-braza-4-1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
 }
 
-body {
-    background-color: rgba(248, 192, 143, 0.875);
+.hero h1 {
+    font-size: 70px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
 }
 
-.logo_imagen {
-    height: auto;
-    width: 80px;
-   
+.hero p {
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 30px;
 }
 
-.icono_busqueda {
-    height: auto;
-    width: 25px;
+/* 5. BOTON RESERVACION */
+.btnReservacion {
+    padding: 15px 35px;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
 }
 
-.imagen_main {
-    width: 700px;
-    height: 500px;
-    
-    
+.btnReservacion:hover {
+    background-color: white;
+    color: black;
+}
+.contenido {
+    padding: 80px 20px; /* Mucho espacio arriba y abajo para que no se vea apretado */
+    text-align: center;
+    max-width: 800px;   /* Evita que el texto sea demasiado largo y canse la vista */
+    margin: 0 auto;      /* Centra la sección en la pantalla */
+}
+
+.contenido h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contenido p {
+    font-size: 18px;
+    line-height: 1.8;   /* Da aire entre líneas de texto */
+    color: #666;
+}
+.multimedia {
+    background-color: #f9f9f9; /* Un fondo gris muy suave para diferenciar la sección */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.multimedia h3 {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* Estilo para el Video */
+.multimedia video {
+    max-width: 700px;     
+    border-radius: 15px;   
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* Sombra para dar profundidad */
+    margin-bottom: 30px;
+}
+
+/* Estilo para el Audio */
+.multimedia audio {
+    margin-top: 15px;
 }
