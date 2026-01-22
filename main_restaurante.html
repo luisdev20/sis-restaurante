@@ -13,7 +13,7 @@
 <body>
     <header class="header">
         <div class="logo_contenedor">
-            <a href="main_restaurante.html"><img src="logo_pollo.png" alt="Logo Brasa Bros" class="logo_imagen"></a>
+            <a href="main_restaurante.html"><img src="assets/logo_pollo.png" alt="Logo Brasa Bros" class="logo_imagen"></a>
             <a href="main_restaurante.html" class="logo_texto">BRASA BROS</a>
         </div>
 
@@ -32,6 +32,7 @@
                 <a href="reservacion_restaurante.html" class="btnReservacion">RESERVACIÓN</a>
             </div>
         </section>
+       
     </main>
 
     <section class="contenido">
@@ -42,17 +43,49 @@
     </section>
     <section class="multimedia">
         <h3>Nuestra Especialidad</h3>
-        <video controls width="100%" poster="video_pollo.jpg">
-            <source src="video_restaurante.mp4" type="video/mp4">
+        <video controls width="100%" poster="assets/video_pollo.jpg">
+            <source src="assets/video_restaurante.mp4" type="video/mp4">
         </video>
 
         <p>Escucha el sonido del sabrosura:</p>
         <audio controls>
-            <source src="audio-papas.mp3" type="audio/mpeg">
+            <source src="assets/audio-papas.mp3" type="audio/mpeg">
         </audio>
     </section>
+
+    <section class="horarios">
+    <h2>Horarios de Atención</h2>
+    <div class="tabla-contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>Día</th>
+                    <th>Almuerzo</th>
+                    <th>Cena</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lunes a Jueves</td>
+                    <td>12:00 PM - 4:00 PM</td>
+                    <td>6:30 PM - 10:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Viernes y Sábados</td>
+                    <td>12:00 PM - 5:00 PM</td>
+                    <td>6:00 PM - 11:30 PM</td>
+                </tr>
+                <tr>
+                    <td>Domingos y Feriados</td>
+                    <td colspan="2">11:30 AM - 9:00 PM (Horario corrido)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </section>
+
     <section class="ubicacion">
-        <!-- COLUMNA IZQUIERDA -->
+
     <div class="ubicacion-info">
         <h3>Encuéntranos</h3>
 
@@ -61,20 +94,20 @@
             target="_blank"
             class="ubicacion-link"
         >
-            <img src="maps.png" alt="Google Maps" class="icono-maps">
+            <img src="assets/maps.png" alt="Google Maps" class="icono-maps">
             <span>Av. Principal 123, Ciudad Brasa</span>
         </a>
     </div>
 
-    <!-- COLUMNA DERECHA -->
     <div class="pagos">
         <h3>Medios de pago</h3>
 
         <div class="pagos-iconos">
-            <img src="visa.png" alt="Visa">
-            <img src="mastercard.png" alt="Mastercard">
-            <img src="yape.png" alt="Yape">
-            <img src="plin.png" alt="Plin">
+            <img src="assets/visa.png" alt="Visa">
+            <img src="assets/mastercard.png" alt="Mastercard">
+            <img src="assets/yape.png" alt="Yape">
+            <img src="assets/plin.png" alt="Plin">
         </div>
     </div>
     </section>
+</body>

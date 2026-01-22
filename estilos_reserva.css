@@ -34,7 +34,7 @@ main {
     justify-content: center;
     align-items: center;
     padding: 30px;
-    background-image: url('imagen_carne_1.jpg');
+    background-image: url('assets/imagen_carne_1.jpg');
     background-size: 100% 100%;
 }
 
