@@ -1,8 +1,4 @@
 <?php
-/**
- * Configuración de base de datos
- * Lee credenciales desde variables de entorno (.env)
- */
 
 // Cargar variables de entorno
 $env_file = dirname(__DIR__, 2) . '/.env';

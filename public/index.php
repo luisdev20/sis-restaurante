@@ -1,7 +1,4 @@
 <?php
-/**
- * Router Principal - Punto de entrada único de la aplicación
- */
 
 session_start();
 
