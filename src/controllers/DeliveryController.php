@@ -26,8 +26,7 @@ class DeliveryController
         );
 
         if ($result['success']) {
-            $_SESSION['success'] = $result['message'];
-            header("Location: index.php?page=delivery");
+            header("Location: index.php?page=exito_delivery");
             exit();
         } else {
             $_SESSION['error'] = $result['message'];

@@ -26,7 +26,7 @@ class ReservaController
         );
 
         if ($result['success']) {
-            header("Location: index.php?page=exito");
+            header("Location: index.php?page=exito_reserva");
             exit();
         } else {
             $_SESSION['error'] = $result['message'];
