@@ -3,7 +3,7 @@
  * Controlador de Reservas
  */
 
-require_once dirname(__DIR__) . '/config/database.php';
+require_once dirname(__DIR__) . '/config/conexion.php';
 
 class ReservaController {
     private $conexion;
