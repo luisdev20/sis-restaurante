@@ -36,7 +36,8 @@ $pages = [
     'carta' => 'carta.php',
     'delivery' => 'delivery.php',
     'reserva' => 'reserva.php',
-    'exito' => 'exito.php'
+    'exito_reserva' => 'exito_reserva.php',
+    'exito_delivery' => 'exito_delivery.php'
 ];
 
 // Verificar si la página existe
