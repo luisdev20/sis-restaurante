@@ -1,97 +1,170 @@
-/* Reset básico */
+/* =========================
+   RESET GENERAL
+========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilo general */
+/* =========================
+   ESTILO GENERAL
+========================= */
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Playfair Display', 'Times New Roman', serif;
     background-color: #1e1e1e;
-    color: #050505;
+    color: #ffffff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* Header */
+/* =========================
+   HEADER
+========================= */
 header {
     background-color: burlywood;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    
 }
 
 header h1 {
     font-size: 3rem;
+    font-style: italic;
+    color: #1e1e1e;
     letter-spacing: 1px;
 }
 
-/* Contenido principal */
+/* =========================
+   MAIN
+========================= */
 main {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px;
-    background-image: url('assets/imagen_carne_1.jpg');
-    background-size: 100% 100%;
+    padding: 40px;
+    background-image: url("assets/imagen_carne_1.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
-/* Formulario */
+/* =========================
+   FORMULARIO
+========================= */
 form {
-    background-color: #7c7979;
-    padding: 25px;
-    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 30px;
+    border-radius: 12px;
     width: 100%;
     max-width: 450px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
-/* Etiquetas */
 label {
     display: block;
     margin-top: 15px;
     margin-bottom: 5px;
     font-weight: bold;
+    color: burlywood;
 }
 
-/* Inputs */
 input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border-radius: 6px;
     border: none;
     font-size: 1rem;
+    outline: none;
 }
 
-/* Botón */
+/* =========================
+   BOTÓN FORMULARIO
+========================= */
 button {
     width: 100%;
-    margin-top: 20px;
-    padding: 12px;
-    background-color: #0d0c0c;
-    color: #f2f2f2;
+    margin-top: 25px;
+    padding: 14px;
+    background-color: #dc143c;
+    color: #ffffff;
     border: none;
     border-radius: 6px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: 'Playfair Display', serif;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
-    background-color: #dc143c;
+    background-color: #a8102f;
+    transform: scale(1.03);
 }
 
-/* Footer */
+/* =========================
+   MENSAJE DE ÉXITO
+========================= */
+.mensaje-exito {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 45px;
+    border-radius: 14px;
+    text-align: center;
+    color: #ffffff;
+    animation: aparecer 0.8s ease;
+    box-shadow: 0 0 25px rgba(220, 20, 60, 0.7);
+    max-width: 600px;
+}
+
+.mensaje-exito h2 {
+    font-size: 2.6rem;
+    margin-bottom: 15px;
+    color: burlywood;
+}
+
+.mensaje-exito p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* =========================
+   BOTÓN VOLVER
+========================= */
+.btn-volver {
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: #dc143c;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-volver:hover {
+    background-color: #a8102f;
+    transform: scale(1.05);
+}
+
+/* =========================
+   FOOTER
+========================= */
 footer {
     background-color: #111111;
     text-align: center;
-    padding: 15px;
+    padding: 18px;
     font-size: 0.9rem;
     color: #cccccc;
+}
+
+/* =========================
+   ANIMACIONES
+========================= */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
