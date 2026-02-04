@@ -26,8 +26,8 @@ $database = $_ENV['DB_NAME'] ?? 'restaurante_brasabros_db';
 $conexion = mysqli_connect($server, $username, $password, $database);
 
 // Verificar conexión
-if ($conexion->connect_error) {
-    die("Conexión fallida: " . $conexion->connect_error);
+if (!$conexion) {
+    die("Conexión fallida: " . mysqli_connect_error());
 }
 
 // Configurar charset UTF-8
