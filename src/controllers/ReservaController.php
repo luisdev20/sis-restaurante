@@ -1,7 +1,4 @@
 <?php
-/**
- * Controlador de Reservas
- */
 
 class ReservaController
 {
@@ -12,9 +9,6 @@ class ReservaController
         $this->conexion = $conexion;
     }
 
-    /**
-     * Procesar petición POST del formulario
-     */
     public function process()
     {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -41,45 +35,19 @@ class ReservaController
         }
     }
 
-    /**
-     * Guardar reserva en la base de datos
-     */
     public function guardar($nombre, $email, $telefono, $fecha, $hora, $invitados)
     {
-        // Validar datos
-        if (empty($nombre) || empty($email) || empty($telefono) || empty($fecha) || empty($hora) || empty($invitados)) {
-            return ['success' => false, 'message' => 'Todos los campos son obligatorios'];
-        }
+        require_once __DIR__ . '/../models/Reserva.php';
 
-        $sql = "INSERT INTO reservas 
-                (nombre, email, telefono, fecha, hora, invitados)
-                VALUES (?, ?, ?, ?, ?, ?)";
+        $reserva = new Reserva($this->conexion);
+        $reserva->nombre = $nombre;
+        $reserva->email = $email;
+        $reserva->telefono = $telefono;
+        $reserva->fecha = $fecha;
+        $reserva->hora = $hora;
+        $reserva->invitados = $invitados;
 
-        $stmt = mysqli_prepare($this->conexion, $sql);
-
-        if (!$stmt) {
-            return ['success' => false, 'message' => 'Error en la consulta: ' . mysqli_error($this->conexion)];
-        }
-
-        // Vincular parámetros
-        mysqli_stmt_bind_param(
-            $stmt,
-            "sssssi",
-            $nombre,
-            $email,
-            $telefono,
-            $fecha,
-            $hora,
-            $invitados
-        );
-
-        // Ejecutar
-        if (mysqli_stmt_execute($stmt)) {
-            mysqli_stmt_close($stmt);
-            return ['success' => true, 'message' => 'Reserva guardada correctamente'];
-        } else {
-            return ['success' => false, 'message' => 'Error al guardar la reserva: ' . mysqli_error($this->conexion)];
-        }
+        return $reserva->save();
     }
 }
 ?>
