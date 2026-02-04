@@ -1,0 +1,283 @@
+/* --- CONFIGURACIÓN GENERAL CARTA --- */
+
+.body-carta {
+    background-color: white;
+    padding-top: 100px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Header Personalizado */
+.body-carta .header {
+    background-color: white;
+    position: fixed;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.body-carta .logo_texto { color: #d4a373; }
+.body-carta .menu a { color: #333; }
+.body-carta .btnReservacion { border-color: #333; color: #333; }
+
+/* LAYOUT PRINCIPAL */
+.contenedor-carta {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.grid-principal {
+    display: grid;
+    grid-template-columns: 40% 55%; 
+    gap: 5%;
+    align-items: start;
+}
+
+/* BANNER LATERAL */
+.banner-lateral {
+    position: sticky;
+    top: 130px;
+    height: 80vh;
+}
+
+.img-full-height {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* SECCIÓN DERECHA */
+.columna-derecha {
+    display: flex;
+    flex-direction: column;
+}
+
+/* CABECERA DE SECCIÓN */
+.cabecera-carta {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.subtitulo-cursiva {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 32px;
+    color: #c4a47c;
+}
+
+.cabecera-carta h1 {
+    font-size: 42px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 10px 0;
+}
+
+.linea-separadora {
+    width: 80px;
+    height: 3px;
+    background: #000;
+    margin: 0 auto 20px;
+    border: none;
+}
+
+/* LISTADO DE PLATOS */
+.lista-platos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* TARJETA DE PLATO */
+.plato-item {
+    background: white;
+    display: flex;
+    flex-direction: column; 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+    height: auto;
+}
+
+/* Imagen del plato */
+.plato-img-container {
+    height: 220px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.plato-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.plato-img-container:hover img {
+    transform: scale(1.05);
+}
+
+.etiqueta-recomendado {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #c4a47c;
+    color: white;
+    padding: 5px 12px;
+    font-size: 11px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+/* Información del plato */
+.plato-info {
+    padding: 15px;
+    background-color: white;
+}
+
+.plato-info h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
+    border-bottom: 2px dotted #d4a373;
+    padding-bottom: 5px;
+}
+
+.precios {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.plato-desc {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* --- SECCIÓN INFORMACIÓN FOOTER --- */
+.info-footer-container {
+    background-color: #f8f8f8;
+    padding: 60px 40px;
+    margin-top: 80px;
+    border-top: 5px solid #d4a373;
+}
+
+.info-footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr; 
+    gap: 60px;
+    align-items: start;
+}
+
+/* Logo pequeño footer */
+.encabezado-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.img-logo-chico {
+    width: 60px;
+    height: auto;
+    display: block;
+}
+
+.marca-footer {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #d4a373;
+    font-style: italic;
+    line-height: 1;
+}
+
+/* Texto descriptivo footer */
+.texto-footer {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+/* Títulos Footer (Centrados) */
+.col-footer h3, 
+.col-footer h4 {
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col-footer h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+.horario-bloque h4,
+.sucursal h4 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: #d4a373;
+    margin-bottom: 5px;
+}
+
+/* Filas de horario */
+.hora-fila {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted #999;
+    padding-bottom: 5px;
+    font-size: 14px;
+    color: #444;
+}
+
+.horario-bloque, 
+.sucursal {
+    margin-bottom: 25px;
+}
+
+.sucursal p {
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* --- FOOTER FINAL (Copyright) --- */
+footer.pie-final {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 0;
+    width: 100%;
+    border-top: none;
+}
+
+footer.pie-final p {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}

@@ -1,0 +1,253 @@
+/*RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*BASE */
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-color: #1e1e1e;
+  color: #111;
+}
+
+/* HEADER DELIVERY */
+header {
+    background-color: burlywood;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    
+}
+
+/* DELIVERY INFO */
+.delivery-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.delivery-info > img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.delivery-texto h2 {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: #333;
+}
+
+.delivery-texto p {
+  margin-top: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.delivery-texto hr {
+  border: none;
+  border-top: 3px solid #ac0c2c;
+  width: 80px;
+  margin: 20px 0;
+}
+
+/*FEATURE */
+.delivery-feature {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.delivery-feature img {
+  width: 60px;
+  height: 60px;
+}
+
+.delivery-feature h3 {
+  font-size: 1rem;
+  color: #333;
+}
+
+.delivery-feature p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* PROMOCIONES*/
+.promociones {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.promociones h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.productos {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.producto {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.producto:hover {
+  transform: translateY(-10px);
+}
+
+.producto img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.producto h3 {
+  margin: 15px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.producto p {
+  margin: 0 15px 15px;
+  color: #666;
+}
+
+/* FORMULARIO */
+.formulario {
+  padding: 60px 20px;
+  background: #f4f4f4;
+}
+
+.formulario .producto-seleccionado {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  background: linear-gradient(135deg,  #7c7979,  #7c7979);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.formulario .producto-seleccionado h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.formulario .producto-seleccionado span {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.formulario .producto-seleccionado p {
+  margin: 5px 0 0 0;
+  color: #fff;
+}
+
+.formulario form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.formulario form label {
+  display: block;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.formulario form input[type="text"],
+.formulario form input[type="tel"] {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.formulario form input:focus {
+  outline: none;
+  border-color: #97283e;
+}
+
+.formulario form .radio-opcion {
+  display: block;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: normal;
+  color: #333;
+}
+
+.formulario form .radio-opcion:hover {
+  border-color: #99142f;
+  background: #fff5f5;
+}
+
+.formulario form .radio-opcion input {
+  margin-right: 10px;
+}
+
+.formulario form button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  background: #fff;
+  color: #333;
+  border: 2px solid #333;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.formulario form button:hover {
+  background: #333;
+  color: #fff;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 968px) {
+  .delivery-info {
+    grid-template-columns: 1fr;
+  }
+
+  .productos {
+    grid-template-columns: 1fr;
+  }
+}
