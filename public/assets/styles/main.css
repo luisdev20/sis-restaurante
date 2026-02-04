@@ -74,7 +74,7 @@ body {
 
 /* 4.SECCION HERO(PORTADA PRINCIPAL) */
 .hero {
-    background-image: url('assets/Pollo-a-la-braza-4-1.jpg');
+    background-image: url('../images/Pollo-a-la-braza-4-1.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
