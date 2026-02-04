@@ -12,7 +12,7 @@
     </header>
     <main>
         
-        <form action="process-reserva.php" method="POST">
+        <form action="../public/process-reserva.php" method="POST">
             <label for="nombre">Nombre Completo:</label>
             <input type="text" id="nombre" name="nombre" required>
 
