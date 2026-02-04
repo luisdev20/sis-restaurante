@@ -12,7 +12,7 @@
     </header>
     <main>
         
-        <form action="../src/controllers/ReservaController.php" method="POST">
+        <form action="process-reserva.php" method="POST">
             <label for="nombre">Nombre Completo:</label>
             <input type="text" id="nombre" name="nombre" required>
 
