@@ -1,7 +1,4 @@
 <?php
-/**
- * Controlador de Delivery
- */
 
 class DeliveryController
 {
@@ -12,9 +9,6 @@ class DeliveryController
         $this->conexion = $conexion;
     }
 
-    /**
-     * Procesar petición POST del formulario
-     */
     public function process()
     {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -42,43 +36,19 @@ class DeliveryController
         }
     }
 
-    /**
-     * Guardar pedido de delivery
-     */
     public function guardar($nombre, $telefono, $direccion, $referencia, $pago, $producto)
     {
-        // Validar datos
-        if (empty($nombre) || empty($telefono) || empty($direccion) || empty($producto)) {
-            return ['success' => false, 'message' => 'Todos los campos obligatorios deben ser completados'];
-        }
+        require_once __DIR__ . '/../models/Delivery.php';
 
-        $sql = "INSERT INTO pedidos_delivery 
-                (nombre, telefono, direccion, referencia, metodo_pago, producto, fecha_pedido)
-                VALUES (?, ?, ?, ?, ?, ?, NOW())";
+        $delivery = new Delivery($this->conexion);
+        $delivery->nombre = $nombre;
+        $delivery->telefono = $telefono;
+        $delivery->direccion = $direccion;
+        $delivery->referencia = $referencia;
+        $delivery->metodo_pago = $pago;
+        $delivery->producto = $producto;
 
-        $stmt = mysqli_prepare($this->conexion, $sql);
-
-        if (!$stmt) {
-            return ['success' => false, 'message' => 'Error en la consulta: ' . mysqli_error($this->conexion)];
-        }
-
-        mysqli_stmt_bind_param(
-            $stmt,
-            "ssssss",
-            $nombre,
-            $telefono,
-            $direccion,
-            $referencia,
-            $pago,
-            $producto
-        );
-
-        if (mysqli_stmt_execute($stmt)) {
-            mysqli_stmt_close($stmt);
-            return ['success' => true, 'message' => 'Pedido registrado correctamente. Nos comunicaremos contigo pronto.'];
-        } else {
-            return ['success' => false, 'message' => 'Error al guardar el pedido: ' . mysqli_error($this->conexion)];
-        }
+        return $delivery->save();
     }
 }
 ?>
