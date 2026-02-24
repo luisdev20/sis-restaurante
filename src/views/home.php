@@ -23,15 +23,21 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-contenido">
-        <h1>BRASA BROS</h1>
-        <p>Pollos a la Brasa & Parrillas con el poder del fuego</p>
-        <a href="index.php?page=reserva" class="btnReservacion">RESERVACIÓN</a>
-      </div>
-    </section>
-  </main>
-
+  <section class="hero">
+    <div class="hero-contenido">
+      <h1>BRASA BROS</h1>
+      <p>Pollos a la Brasa & Parrillas con el poder del fuego</p>
+      
+      <a href="index.php?page=login" class="btnReservacion">INICIAR SESIÓN</a>
+  
+      <p style="margin-top: 20px;">
+          <a href="index.php?page=reserva" style="color: white; text-decoration: underline; font-size: 0.9rem; text-shadow: 2px 2px 8px rgba(0,0,0,0.9); background-color: rgba(0,0,0,0.6); padding: 5px 12px; border-radius: 4px;">
+          ¿Solo quieres reservar? Hazlo aquí
+        </a>
+      </p>
+    </div>
+  </section>
+</main>
   <section class="contenido">
     <h2>Bienvenidos a Restaurante Brasa Bros</h2>
     <p>
